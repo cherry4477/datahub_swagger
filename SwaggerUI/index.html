@@ -32,12 +32,12 @@
 		$(function() {
 
 			//var url = window.location.search.match(/url=([^&]+)/);
-			var url = window.location.href;
+			var host = window.location.host;
 
-			if(url){
-			url=url+"json/datahub_0.0.1.json";
+			if(host){
+			var url = "http://"+host+"/SwaggerUI/json/datahub_0.0.1.json";
 			}else{
-			console.log('url',url)
+			console.log('url',host)
 			}
 			//if (url && url.length > 1) {
 				//url = decodeURIComponent(url[1]);
